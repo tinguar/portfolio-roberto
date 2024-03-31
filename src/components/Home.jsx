@@ -2,33 +2,36 @@ import React from "react";
 import developerHeader from "../assets/Roberto.png";
 import headerVideo from "../assets/animacion.mp4";
 import { Link } from "react-scroll";
+import "./Home.css"; // Importar el archivo CSS para las animaciones
 
 const Home = () => {
     return (
-        <div className="h-screen w-screen overflow-hidden relative">
+        <div className="relative">
             {/* Background Video */}
             <video
                 src={headerVideo}
                 autoPlay
                 loop
                 muted
-                className="w-full h-full object-cover absolute z-0"
+                className="w-full object-cover header-video"
+                style={{ height: "100vh", zIndex: -1, opacity: 0.5 }}
             />
 
             {/* Developer Image */}
             <img
                 src={developerHeader}
                 alt="developer"
-                className="absolute left-[50%] transform -translate-x-1/2 top-[10%] w-1/4 md:left-[20%] md:static rounded-full z-10"
+                className="absolute left-1/2 transform -translate-x-1/2 top-10 md:static rounded-full z-10 header-image"
+                style={{ width: "200px", height: "200px", maxWidth: "50%", maxHeight: "50%" }}
             />
 
             {/* Text Content */}
-            <div className="absolute md:text-[40px] xl:left-[-20px] xl:text-[40px] md:left-[0] md:w-screen p-6 md:static left-[20%] top-[40%] w-[619px] h-[250px] text-white text-[64px] font-arial z-10">
-                <p>Hola mi nombre es Roberto Barros</p>
+            <div className="absolute text-3xl xl:text-5xl md:w-full p-6 md:static left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-arial z-10 text-center header-text">
+                <p>Hola, mi nombre es Roberto Barros</p>
                 <Link
                     to="Projects"
-                    smooth="500"
-                    className="cursor-pointer text-[20px] text-white bg-slate-500 mt-2 p-4"
+                    smooth={true}
+                    className="cursor-pointer text-lg text-white bg-gray-700 mt-4 px-8 py-3 inline-block rounded-full"
                 >
                     Portfolio
                 </Link>
