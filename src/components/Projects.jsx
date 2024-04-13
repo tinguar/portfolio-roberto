@@ -8,28 +8,29 @@ const Projects = () => {
         {
             brandName: "Nikon",
             description:
-                "Nikon es una marca l\u00EDder en el mercado de microscopios y equipos \u00F3pticos de alta calidad. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus microscopios, ampliamente utilizados en investigaci\u00F3n cient\u00EDfica, educaci\u00F3n y diagn\u00F3stico m\u00E9dico.",
+                "Nikon es una marca líder en el mercado de microscopios y equipos ópticos de alta calidad. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus microscopios, ampliamente utilizados en investigación científica, educación y diagnóstico médico.",
             projectsImageSrc: projectImage1,
             githubLink: "https://github.com/Yepe1723",
         },
         {
             brandName: "Tuttnauer",
             description:
-                "Tuttnauer es una empresa reconocida por sus autoclaves y equipos de esterilizaci\u00F3n de vanguardia. Ofrezco mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus soluciones de esterilizaci\u00F3n, ampliamente utilizadas en hospitales, cl\u00EDnicas dentales y laboratorios.",
+                "Tuttnauer es una empresa reconocida por sus autoclaves y equipos de esterilización de vanguardia. Ofrezco mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus soluciones de esterilización, ampliamente utilizadas en hospitales, clínicas dentales y laboratorios.",
             projectsImageSrc: projectImage2,
             githubLink: "https://github.com/Yepe1723",
         },
         {
             brandName: "Erba",
             description:
-                "Erba es una marca l\u00EDder en el campo de los analizadores de hematolog\u00EDa y qu\u00EDmica cl\u00EDnica. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus equipos, utilizados en laboratorios cl\u00EDnicos y hospitales para realizar pruebas de diagn\u00F3stico precisas y confiables.",
+                "Erba es una marca líder en el campo de los analizadores de hematología y química clínica. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus equipos, utilizados en laboratorios clínicos y hospitales para realizar pruebas de diagnóstico precisas y confiables.",
             projectsImageSrc: projectImage3,
             githubLink: "https://github.com/Yepe1723",
         },
     ];
 
     return (
-        <div name="Projects" className="h-screen w-screen flex items-center flex-col">
+        <div name="Projects" className="background-container h-screen w-screen flex items-center flex-col">
+            {/* Aquí se aplica la clase para el fondo ejecutivo */}
             <h2 className="font-semibold text-[40px]">Especialista en Marcas</h2>
             <div className="gap-4 mt-10 grid grid-cols-3 md:grid-cols-1">
                 {projects.map((p) => (
@@ -57,3 +58,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
