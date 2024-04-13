@@ -1,12 +1,14 @@
 import React from "react";
+import "./Home.css";
 
 const Contact = () => {
   return (
-    <div className="w-screen 2xl:mt-20   h-screen flex items-center flex-col">
+    <div className="background-container w-screen 2xl:mt-20   h-screen flex items-center flex-col">
       <h2 className="font-semibold text-[40px]">Contact</h2>
       <form
-        action="https://getform.io/f/8c92bce1-38fe-47b4-bcab-99eca3be8ecd"
+        action="mailto:roberto_barros2504@outlook.com"
         method="POST"
+        encType="text/plain"
         className="flex flex-col items-center justify-center pt-10"
       >
         <input
@@ -24,7 +26,6 @@ const Contact = () => {
         <textarea
           name="message"
           placeholder="Message"
-          id=""
           resize="none"
           className="border border-slate-800 mt-6   2xl:w-[400px]  sm:w-[300px]   "
         ></textarea>
