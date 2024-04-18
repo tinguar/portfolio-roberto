@@ -1,21 +1,24 @@
 @keyframes flipX {
-  from {
-      transform: scaleX(1);
-  }
-  to {
-      transform: scaleX(-1);
-  }
+  from { transform: scaleX(1); }
+  to { transform: scaleX(-1); }
 }
 
 .header-image {
   animation: flipX 5s infinite alternate;
+  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: 200px; /* Ajusta el alto de la imagen según tus necesidades */
+  object-fit: contain; /* Esto mantendrá la relación de aspecto y ajustará la imagen dentro del contenedor */
 }
 
 .background-container {
   background-color: #4a64ac; /* Color de fondo ejecutivo */
   padding: 50px; /* Ajusta el relleno según sea necesario */
   font-family: 'Helvetica Neue', Arial, sans-serif; /* Cambia el tipo de letra */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .input-field {
   width: 100%;
   max-width: 400px;

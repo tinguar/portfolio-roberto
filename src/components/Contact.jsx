@@ -1,13 +1,12 @@
 import React from "react";
 import "./Home.css";
-import "./BootstrapTypography.css"; // Importa tu archivo CSS de Bootstrap
-
+import "./BootstrapTypography.css";
 
 const Contact = () => {
   return (
     <div className="background-container w-screen h-screen flex flex-col items-center justify-between">
       <div>
-        <h2 className="font-semibold text-4xl md:text-5xl lg:text-6xl">Contact</h2>
+        <h2 className="font-semibold text-5xl md:text-6xl lg:text-7xl">Contacto</h2>
         <form
           action="mailto:roberto_barros2504@outlook.com"
           method="POST"
@@ -17,26 +16,26 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Nombre"
             className="input-field"
           />
           <input
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="Correo electrónico"
             className="input-field"
           />
           <textarea
             name="message"
-            placeholder="Message"
+            placeholder="Mensaje"
             resize="none"
             className="input-field"
           ></textarea>
           <button
             type="submit"
-            className="submit-button"
+            className="submit-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
           >
-            Send
+            ENVIAR
           </button>
         </form>
       </div>

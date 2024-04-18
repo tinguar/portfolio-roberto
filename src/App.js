@@ -1,3 +1,5 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
@@ -8,15 +10,19 @@ import SlideBar from "./components/SlideBar";
 
 function App() {
   return (
-    <div className=" ">
-      <NavBar />
-      <SlideBar />
-      <Home />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
-    </div>
+    <Router>
+      <div className="">
+        <NavBar />
+        <SlideBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

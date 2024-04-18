@@ -1,54 +1,47 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
-import { Link } from "react-scroll";
+//import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
-  const [isMenuopen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    {
-      link: "About",
-      id: 1,
-    },
-    {
-      link: "Projects",
-      id: 2,
-    },
-    {
-      link: "Experience",
-      id: 3,
-    },
-    {
-      link: "Contact",
-      id: 4,
-    },
+    { link: "Home", id: 0, to: "/" }, // Nuevo enlace a la pantalla de inicio
+    { link: "About", id: 1, to: "/about" },
+    { link: "Projects", id: 2, to: "/projects" },
+    { link: "Experience", id: 3, to: "/experience" },
+    { link: "Contact", id: 4, to: "/contact" },
   ];
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div
       className={[
         "absolute",
-        !isMenuopen
+        !isMenuOpen
           ? " z-[300] absolute w-[69px] p-10 left-4 h-[47px]"
-          : " items-center justify-around flex flex-col z-[300] fixed w-screen h-screen bg-[#2B2B29]",
+          : " z-[300] fixed w-[200px] h-screen bg-[#2B2B29] flex flex-col items-start",
       ]}
     >
-      <Menu
-        isMenuOpen={isMenuopen}
-        handleMenu={() => setIsMenuOpen(!isMenuopen)}
-      />
-
-      {isMenuopen &&
-        links.map((l) => (
-          <Link
-            className="text-[30px] text-white cursor-pointer"
-            onClick={() => setIsMenuOpen(false)}
-            to={l.link}
-            key={l.id}
-            smooth={500}
-          >
-            {l.link}
-          </Link>
-        ))}
+      <Menu isMenuOpen={isMenuOpen} handleMenu={handleMenuClick} />
+      {isMenuOpen && (
+        <div className="flex flex-col space-y-2 px-4 py-4 rounded-md bg-gray-800 text-white">
+          {links.map((l) => (
+            <Link
+              className="flex items-center justify-start h-12 px-4 rounded-md hover:bg-gray-700 transition duration-200 ease-in-out"
+              onClick={handleMenuClick}
+              to={l.to}
+              key={l.id}
+            >
+              {l.link}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
