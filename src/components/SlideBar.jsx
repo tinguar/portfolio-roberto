@@ -2,10 +2,17 @@ import React from "react";
 import { AiFillLinkedin, AiFillGithub, AiOutlineFilePdf } from 'react-icons/ai';
 import { BsFillPersonFill } from 'react-icons/bs';
 
-const SlideBar = () => {
+const SlideBar = ({ color }) => {
     const handleMailClick = () => {
-        
         window.location.href = `mailto:roberto_barros2504@outlook.com`;
+    };
+
+    const getBackgroundColor = () => {
+        return color === "black" ? "bg-white" : "bg-gray-800";
+    };
+
+    const getTextColor = () => {
+        return color === "black" ? "text-black" : "text-white";
     };
 
     const links = [
@@ -34,7 +41,7 @@ const SlideBar = () => {
                     Mail <BsFillPersonFill size={30} onClick={handleMailClick} />
                 </>
             ),
-            href: "#", // Prevent default anchor tag behavior (not applicable here)
+            href: "#",
         },
         {
             id: 4,
@@ -50,13 +57,12 @@ const SlideBar = () => {
     ];
 
     return (
-        <div className="flex right-0 items-center bg-slate-400 bg-opacity-50  justify-evenly fixed top-40 p-4 flex-col">
+        <div className={`flex right-0 items-center ${getBackgroundColor()} bg-opacity-50 justify-evenly fixed top-40 p-4 flex-col`}>
             {links.map(({ id, child, href, style, download }) => (
-                <div key={id} className={"right-0 mt-4 flex duration-300 hover:mr-4"}>
+                <div key={id} className={`right-0 mt-4 flex duration-300 hover:mr-4 ${getTextColor()}`}>
                     <a
                         href={href}
-                        className="flex justify-between items-center w-full
-         text-white"
+                        className="flex justify-between items-center w-full text-white"
                         download={download}
                         target="_blank"
                         rel="noreferrer"

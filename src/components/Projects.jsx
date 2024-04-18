@@ -32,25 +32,23 @@ const Projects = () => {
     return (
         <div name="Projects" className="background-container h-screen w-screen flex items-center flex-col">
             {/* Aquí se aplica la clase para el fondo ejecutivo */}
-            <h2 className="font-semibold text-[40px]">Especialista en Marcas</h2>
-            <div className="gap-4 mt-10 grid grid-cols-3 md:grid-cols-1">
+            <h2 className="font-semibold text-[40px] mb-8">Especialista en Marcas</h2>
+            <div className="gap-8 grid grid-cols-3 md:grid-cols-1">
                 {projects.map((p) => (
                     <div
                         key={p.brandName}
-                        className="relative w-[300px] h-[300px] border-red-100 border-spacing-1 border p-2 bg-slate-500"
+                        className="relative w-[300px] h-[400px] border-red-100 border-spacing-1 border p-4 bg-slate-500 flex flex-col justify-between"
                     >
-                        <img className="object-cover" src={p.projectsImageSrc} alt="" />
-                        <span className="flex flex-col items-center justify-center absolute w-full h-full text-black text-sm font-bold bg-white bg-opacity-80 backdrop-blur hover:backdrop-blur-[20px] opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-center px-2">{p.description}</p>
-                            <div className="mt-2">
-                                <a
-                                    href={p.link} 
-                                    className="text-blue-400 hover:underline"
-                                >
-                                    conoce mas 
-                                </a>
-                            </div>
-                        </span>
+                        <img className="object-contain w-full h-auto mb-4" src={p.projectsImageSrc} alt={p.brandName} />
+                        <div className="bg-white bg-opacity-80 p-4 text-sm">
+                            <p>{p.description}</p>
+                            <a
+                                href={p.link}
+                                className="text-blue-400 hover:underline"
+                            >
+                                Conoce más
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>

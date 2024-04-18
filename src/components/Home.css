@@ -1,16 +1,46 @@
 @keyframes flipX {
-    from {
+  from {
       transform: scaleX(1);
-    }
-    to {
+  }
+  to {
       transform: scaleX(-1);
-    }
   }
-  
-  .header-image {
-    animation: flipX 5s infinite alternate;
-  }
-  .background-container {
-    background-color: #4a64ac; /* Color de fondo ejecutivo */
-    padding: 50px; /* Ajusta el relleno según sea necesario */
-  }
+}
+
+.header-image {
+  animation: flipX 5s infinite alternate;
+}
+
+.background-container {
+  background-color: #4a64ac; /* Color de fondo ejecutivo */
+  padding: 50px; /* Ajusta el relleno según sea necesario */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Cambia el tipo de letra */
+}
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #4a64ac; /* Cambia el color del borde según sea necesario */
+  border-radius: 8px;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #4a64ac; /* Cambia el color del borde según sea necesario */
+  border-radius: 8px;
+  background-color: #4a64ac; /* Cambia el color de fondo del botón según sea necesario */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+}
+
+.submit-button:hover {
+  background-color: #314980; /* Cambia el color de fondo al pasar el mouse */
+}

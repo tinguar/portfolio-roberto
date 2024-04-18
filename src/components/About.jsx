@@ -1,14 +1,15 @@
 import React from "react";
+import "./BootstrapTypography.css"; // Importa tu archivo CSS de BootstrapTypography
 
 const About = () => {
   return (
     <div
       name="About"
-      className="flex flex-col items-center h-screen w-screen"
+      className="flex flex-col items-center justify-center h-screen w-screen bg-gray-800 text-white"
     >
       <h2 className="font-semibold text-4xl">Descripción</h2>
 
-      <div className="flex flex-col items-center justify-center w-screen mt-10 p-10 bg-gray-900 text-white">
+      <div className="max-w-4xl w-full flex flex-col items-center justify-center mt-10 p-10 bg-gray-900 text-white rounded-lg">
         <p>
           Soy asesor técnico de ingeniería biomédica, especializado en proyectos
           de mantenimiento preventivo y correctivo de equipos de análisis de
