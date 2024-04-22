@@ -37,7 +37,7 @@ const Home = () => {
       {/* Text Content */}
       <div className="absolute text-3xl xl:text-5xl md:w-full p-6 md:static left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white custom-font text-custom z-10 text-center">
         <p>Roberto Barros</p>
-        <p className="text-xl mt-2">Asesor Técnico en Ingeniería Biomédica</p>
+        <p className="text-xl mt-2">Asesor Técnico en Ingeniería Biomédica, gustoso por el desarrollo de software</p>
         <Link
           to="/projects"
           className="cursor-pointer text-lg text-white bg-gray-700 mt-4 px-8 py-3 inline-block rounded-full"
