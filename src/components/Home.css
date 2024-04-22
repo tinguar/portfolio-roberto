@@ -11,7 +11,8 @@
 }
 
 .background-container {
-  background-color: #4a64ac; /* Color de fondo ejecutivo */
+  background-color: #4465c0; /* Color de fondo ejecutivo */
+  min-height: 100vh; /* Establece la altura mínima a la altura de la ventana */
   padding: 50px; /* Ajusta el relleno según sea necesario */
   font-family: 'Helvetica Neue', Arial, sans-serif; /* Cambia el tipo de letra */
   display: flex;
@@ -36,7 +37,7 @@
   margin-top: 20px;
   border: 1px solid #4a64ac; /* Cambia el color del borde según sea necesario */
   border-radius: 8px;
-  background-color: #4a64ac; /* Cambia el color de fondo del botón según sea necesario */
+  background-color: #248f44; /* Cambia el color de fondo del botón según sea necesario */
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -46,4 +47,34 @@
 
 .submit-button:hover {
   background-color: #314980; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-image {
+  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto; /* Esto mantendrá la relación de aspecto de la imagen */
+  margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.project-description {
+  max-width: 300px; /* Ajusta el ancho máximo del texto según sea necesario */
+  margin-bottom: 20px; /* Espacio entre el texto y el enlace */
+}
+
+.project-link {
+  color: #314980; /* Cambia el color del enlace según sea necesario */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
 }

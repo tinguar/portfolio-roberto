@@ -1,15 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./BootstrapTypography.css"; // Importa tu archivo CSS de BootstrapTypography
 
 const About = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       name="About"
-      className="flex flex-col items-center justify-center h-screen w-screen bg-gray-800 text-white"
+      className="flex flex-col items-center justify-center h-screen w-screen bg-gray-500 text-white"
     >
-      <h2 className="font-semibold text-4xl">Descripción</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="font-semibold text-5xl"
+      >
+        Descripción de perfil
+      </motion.h2>
 
-      <div className="max-w-4xl w-full flex flex-col items-center justify-center mt-10 p-10 bg-gray-900 text-white rounded-lg">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="max-w-4xl w-full flex flex-col items-center justify-center mt-10 p-10 bg-gray-800 text-white rounded-lg"
+      >
         <p>
           Soy asesor técnico de ingeniería biomédica, especializado en proyectos
           de mantenimiento preventivo y correctivo de equipos de análisis de
@@ -22,8 +38,11 @@ const About = () => {
           funcionen de manera eficiente y segura, garantizando la precisión y
           fiabilidad de los resultados de los análisis.
         </p>
-      </div>
-    </div>
+        <p>
+          Además, soy apasionado por el desarrollo de software y tengo conocimientos en frontend con React, así como en bases de datos como MySQL, PostgreSQL, SQL Server y redes.
+        </p>
+      </motion.div>
+    </motion.div>
   );
 };
 

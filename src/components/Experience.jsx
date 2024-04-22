@@ -22,7 +22,7 @@ const Experience = () => {
     return (
         <div
             name="Experience"
-            className="h-screen w-full flex flex-col items-center justify-center bg-gray-800 text-white"
+            className="h-screen w-full flex flex-col items-center justify-center bg-gray-600 text-white"
         >
             <h2 className="font-semibold text-4xl">Experiencia</h2>
             <div className="max-w-6xl w-full grid grid-cols-3 gap-8 mt-10 p-10">
