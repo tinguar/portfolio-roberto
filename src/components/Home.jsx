@@ -5,10 +5,10 @@ import headerVideo from "../assets/animacion.mp4";
 import "./Home.css";
 import SlideBar from "./SlideBar";
 
-const Home = () => {
+const Inicio = () => {
   return (
     <div className="relative">
-      {/* Background Video */}
+      {/* Video de fondo */}
       <video
         src={headerVideo}
         autoPlay
@@ -22,7 +22,7 @@ const Home = () => {
           filter: "brightness(70%)",
         }}
       />
-      {/* Developer Image */}
+      {/* Imagen del desarrollador */}
       <img
         src={developerHeader}
         alt="developer"
@@ -34,10 +34,10 @@ const Home = () => {
           maxHeight: "50%",
         }}
       />
-      {/* Text Content */}
+      {/* Contenido de texto */}
       <div className="absolute text-3xl xl:text-5xl md:w-full p-6 md:static left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white custom-font text-custom z-10 text-center">
         <p>Roberto Barros</p>
-        <p className="text-xl mt-2">Asesor Técnico en Ingeniería Biomédica, gustoso por el desarrollo de software</p>
+        <p className="text-xl mt-2">Asesor Técnico en Ingeniería Biomédica, apasionado por el desarrollo de software</p>
         <Link
           to="/projects"
           className="cursor-pointer text-lg text-white bg-gray-700 mt-4 px-8 py-3 inline-block rounded-full"
@@ -45,10 +45,10 @@ const Home = () => {
           Portafolio personal
         </Link>
       </div>
-      {/* SlideBar */}
+      {/* Barra lateral */}
       <SlideBar color="black" />
     </div>
   );
 };
 
-export default Home;
+export default Inicio;

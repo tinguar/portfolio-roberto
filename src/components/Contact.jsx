@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import "./BootstrapTypography.css";
 
-const Contact = () => {
+const Contacto = () => {
   return (
     <div className="background-container w-screen h-screen flex flex-col items-center justify-between">
       <div>
@@ -46,4 +46,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contacto;

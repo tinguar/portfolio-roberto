@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./BootstrapTypography.css"; // Importa tu archivo CSS de BootstrapTypography
 
-const About = () => {
+const AcercaDe = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      name="About"
+      name="AcercaDe"
       className="flex flex-col items-center justify-center h-screen w-screen bg-gray-500 text-white"
     >
       <motion.h2
@@ -17,7 +17,7 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="font-semibold text-5xl"
       >
-        Descripción de perfil
+        Descripción del perfil
       </motion.h2>
 
       <motion.div
@@ -46,4 +46,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AcercaDe;

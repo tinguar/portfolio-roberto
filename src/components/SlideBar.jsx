@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillLinkedin, AiFillGithub, AiOutlineFilePdf } from 'react-icons/ai';
 import { BsFillPersonFill } from 'react-icons/bs';
 
-const SlideBar = ({ color }) => {
+const BarraLateral = ({ color }) => {
     const handleMailClick = () => {
         window.location.href = `mailto:roberto_barros2504@outlook.com`;
     };
@@ -15,7 +15,7 @@ const SlideBar = ({ color }) => {
         return color === "black" ? "text-black" : "text-white";
     };
 
-    const links = [
+    const enlaces = [
         {
             id: 1,
             child: (
@@ -38,7 +38,7 @@ const SlideBar = ({ color }) => {
             id: 3,
             child: (
                 <>
-                    Mail <BsFillPersonFill size={30} onClick={handleMailClick} />
+                    Correo <BsFillPersonFill size={30} onClick={handleMailClick} />
                 </>
             ),
             href: "#",
@@ -47,7 +47,7 @@ const SlideBar = ({ color }) => {
             id: 4,
             child: (
                 <>
-                    Resume <AiOutlineFilePdf size={30} />
+                    Currículum <AiOutlineFilePdf size={30} />
                 </>
             ),
             href: "/resume.pdf",
@@ -58,7 +58,7 @@ const SlideBar = ({ color }) => {
 
     return (
         <div className={`flex right-0 items-center ${getBackgroundColor()} bg-opacity-50 justify-evenly fixed top-40 p-4 flex-col`}>
-            {links.map(({ id, child, href, style, download }) => (
+            {enlaces.map(({ id, child, href, style, download }) => (
                 <div key={id} className={`right-0 mt-4 flex duration-300 hover:mr-4 ${getTextColor()}`}>
                     <a
                         href={href}
@@ -75,4 +75,4 @@ const SlideBar = ({ color }) => {
     );
 };
 
-export default SlideBar;
+export default BarraLateral;

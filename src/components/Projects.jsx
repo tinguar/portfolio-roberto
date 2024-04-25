@@ -5,35 +5,35 @@ import projectImage3 from "../assets/xl1000.jpg";
 import calculatorImage from "../assets/calculator.png";
 import "./Home.css";
 
-const Projects = () => {
-  const projects = [
+const Proyectos = () => {
+  const proyectos = [
     {
-      brandName: "Nikon",
-      description:
+      nombreMarca: "Nikon",
+      descripcion:
         "Nikon es una marca líder en el mercado de microscopios y equipos ópticos de alta calidad. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus microscopios, ampliamente utilizados en investigación científica, educación y diagnóstico médico.",
-      projectsImageSrc: projectImage1,
-      link: "https://www.microscope.healthcare.nikon.com/es_AMS/products",
+      imagenProyectoSrc: projectImage1,
+      enlace: "https://www.microscope.healthcare.nikon.com/es_AMS/products",
     },
     {
-      brandName: "Tuttnauer",
-      description:
+      nombreMarca: "Tuttnauer",
+      descripcion:
         "Tuttnauer es una empresa reconocida por sus autoclaves y equipos de esterilización de vanguardia. Ofrezco mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus soluciones de esterilización, ampliamente utilizadas en hospitales, clínicas dentales y laboratorios.",
-      projectsImageSrc: projectImage2,
-      link: "https://tuttnauer.com/es",
+      imagenProyectoSrc: projectImage2,
+      enlace: "https://tuttnauer.com/es",
     },
     {
-      brandName: "Erba",
-      description:
+      nombreMarca: "Erba",
+      descripcion:
         "Erba es una marca líder en el campo de los analizadores de hematología y química clínica. Brindo mantenimiento preventivo, correctivo y asesoramiento sobre el uso y aplicaciones de sus equipos, utilizados en laboratorios clínicos y hospitales para realizar pruebas de diagnóstico precisas y confiables.",
-      projectsImageSrc: projectImage3,
-      link: "https://www.erbalachema.com/es/",
+      imagenProyectoSrc: projectImage3,
+      enlace: "https://www.erbalachema.com/es/",
     },
     {
-      brandName: "Calculadora",
-      description:
+      nombreMarca: "Calculadora",
+      descripcion:
         "Calculadora es un proyecto desarrollado para realizar cálculos matemáticos básicos. Permite sumar, restar, multiplicar y dividir números de manera sencilla.",
-      projectsImageSrc: calculatorImage,
-      link: "URL_DEL_PROYECTO_DE_LA_CALCULADORA",
+      imagenProyectoSrc: calculatorImage,
+      enlace: "URL_DEL_PROYECTO_DE_LA_CALCULADORA",
     },
   ];
 
@@ -43,21 +43,21 @@ const Projects = () => {
         <h1 className="font-semibold text-4xl text-white mb-8 text-center">Especialista en Marcas</h1>
        
         <div className="gap-8 grid grid-cols-3 md:grid-cols-1">
-          {projects.map((p) => (
+          {proyectos.map((p) => (
             <div
-              key={p.brandName}
+              key={p.nombreMarca}
               className="project-container border-red-100 border-spacing-1 border p-4 bg-slate-500"
             >
-              {p.brandName === "Calculadora" && (
+              {p.nombreMarca === "Calculadora" && (
                 <h2 className="font-semibold text-4xl text-white mb-8 text-center">Proyectos de Desarrollo en React</h2>
               )}
               <img
                 className="project-image object-contain w-48 h-auto mb-4"
-                src={p.projectsImageSrc}
-                alt={p.brandName}
+                src={p.imagenProyectoSrc}
+                alt={p.nombreMarca}
               />
-              <p className="project-description text-white text-sm mb-4">{p.description}</p>
-              <a href={p.link} className="project-link text-blue-400 hover:underline">
+              <p className="project-description text-white text-sm mb-4">{p.descripcion}</p>
+              <a href={p.enlace} className="project-link text-blue-400 hover:underline">
                 Conoce más
               </a>
             </div>
@@ -68,4 +68,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Proyectos;

@@ -7,11 +7,11 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { link: "Home", id: 0, to: "/" }, // Nuevo enlace a la pantalla de inicio
-    { link: "About", id: 1, to: "/about" },
-    { link: "Projects", id: 2, to: "/projects" },
-    { link: "Experience", id: 3, to: "/experience" },
-    { link: "Contact", id: 4, to: "/contact" },
+    { link: "Inicio", id: 0, to: "/" },
+    { link: "Acerca", id: 1, to: "/about" },
+    { link: "Proyectos", id: 2, to: "/projects" },
+    { link: "Experiencia", id: 3, to: "/experience" },
+    { link: "Contacto", id: 4, to: "/contact" },
   ];
 
   const handleMenuClick = () => {
